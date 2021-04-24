@@ -6,6 +6,7 @@ import Search from './Search';
 import {makeStyles} from '@material-ui/core/styles';
 import LanguageSelector from './LanguageSelector';
 import ThemeSwitcher from './ThemeSwitcher';
+import {Link} from 'react-router-dom';
 
 const useStyles = makeStyles({
   appName: {
@@ -20,13 +21,16 @@ const Header = () => {
     <>
       <AppBar color='primary' position='sticky'>
         <Toolbar>
-          <IconButton
-            edge="start"
-            color="secondary"
-            aria-label="to main page"
-          >
-            <HomeIcon fontSize='default'/>
-          </IconButton>
+          <Link to='/' style={{textDecoration: 'none'}}>
+            <IconButton
+              edge="start"
+              color="secondary"
+              aria-label="to main page"
+            >
+              <HomeIcon fontSize='default'/>
+            </IconButton>
+          </Link>
+
           <Typography
             variant="h6"
             noWrap

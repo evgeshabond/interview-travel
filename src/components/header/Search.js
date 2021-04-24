@@ -44,6 +44,10 @@ const Search = () => {
     dispatch(setText({text: e.target.value}));
   };
 
+  if (document.location.pathname !== '/') {
+    return null;
+  }
+
   return (
     <div className={classes.search}>
       <div className={classes.searchIcon}>
