@@ -20,4 +20,5 @@ const settingsSlice = createSlice({
   },
 });
 
-export default settingsSlice;
+export const {setLanguage, setTheme} = settingsSlice.actions;
+export default settingsSlice.reducer;
