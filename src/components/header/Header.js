@@ -5,6 +5,7 @@ import {AppBar, Toolbar, Typography} from '@material-ui/core';
 import Search from './Search';
 import {makeStyles} from '@material-ui/core/styles';
 import LanguageSelector from './LanguageSelector';
+import ThemeSwitcher from './ThemeSwitcher';
 
 const useStyles = makeStyles({
   appName: {
@@ -34,6 +35,7 @@ const Header = () => {
           </Typography>
           <Search />
           <LanguageSelector />
+          <ThemeSwitcher />
         </Toolbar>
       </AppBar>
     </>
