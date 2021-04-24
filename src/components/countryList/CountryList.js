@@ -1,6 +1,5 @@
 import React, {useEffect} from 'react';
 import {useDispatch, useSelector} from 'react-redux';
-// import {getCountriesByLang} from '../../service/countries';
 import {fetchCountries} from '../../redux/countriesSlice';
 
 const CountryList = () => {
