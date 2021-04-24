@@ -11,5 +11,4 @@ const getCountriesByLang = async (language) => {
   }
 };
 
-
 export {getCountriesByLang};

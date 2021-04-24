@@ -9,7 +9,7 @@ import Typography from '@material-ui/core/Typography';
 import {red} from '@material-ui/core/colors';
 import {Link} from 'react-router-dom';
 
-const useStyles = makeStyles(() =>
+const useStyles = makeStyles((theme) =>
   createStyles({
     listStyles: {
       textDecoration: 'none',
@@ -19,16 +19,16 @@ const useStyles = makeStyles(() =>
       'maxWidth': 345,
       'maxHeight': 430,
       'height': '100%',
-      'color': '#000',
-      'background': '#ccccf1',
+      'color': theme.palette.text.main,
+      'background': theme.palette.primary.light,
       'transition': 'all .5s',
       '& .MuiCard-root': {
         paddingBottom: 5,
       },
       '&:hover': {
         'boxShadow': '0px 5px 10px 2px rgba(71, 73, 75, 0.2)',
-        'color': '#1c2402',
-        'background': 'white',
+        'color': theme.palette.text.main,
+        'background': theme.palette.background.paper,
         '& .MuiCardMedia-root': {
           transform: 'scale(1.1)',
         },
@@ -63,12 +63,10 @@ const CountryItem = ({
     <Link to={id} className={classes.listStyles}>
       <Card
         className={classes.root}
-        onPointerDown={() => {
-          console.log([id, code]);
-        }}>
+      >
         <CardHeader
           avatar={
-            <Avatar aria-label='recipe' className={classes.avatar}>
+            <Avatar aria-label='countryName' className={classes.avatar}>
               {code}
             </Avatar>
           }

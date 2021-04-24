@@ -1,6 +1,6 @@
 import React from 'react';
 import {useDispatch, useSelector} from 'react-redux';
-import languagesList from '../../utils/getLanguagesList';
+import {languagesList} from '../../utils/constants';
 import {setLanguage} from '../../redux/settingsSlice';
 import {makeStyles, createStyles} from '@material-ui/core/styles';
 

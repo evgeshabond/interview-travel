@@ -9,5 +9,11 @@ export default createMuiTheme({
     secondary: {
       main: '#ffffff',
     },
+    text: {
+      // disabled: 'rgba(0, 0, 0, 0.38)',
+      // hint: 'rgba(0, 0, 0, 0.38)',
+      primary: 'rgba(0, 0, 0, 0.87)',
+      secondary: 'rgba(0, 0, 0, 0.54)',
+    },
   },
 });
