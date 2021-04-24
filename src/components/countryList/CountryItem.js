@@ -16,8 +16,8 @@ const useStyles = makeStyles((theme) =>
     },
     root: {
       'cursor': 'pointer',
-      'maxWidth': 345,
-      'maxHeight': 430,
+      'maxWidth': 450,
+      'maxHeight': 600,
       'height': '100%',
       'color': theme.palette.text.main,
       'background': theme.palette.primary.light,
@@ -57,7 +57,7 @@ const CountryItem = ({
   code,
 }) => {
   const classes = useStyles();
-  const shortInfo = ` ${description.substr(0, 200)}...`;
+  const shortInfo = ` ${description.substr(0, 300)}...`;
 
   return (
     <Link to={id} className={classes.listStyles}>

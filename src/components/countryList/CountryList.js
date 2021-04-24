@@ -18,6 +18,7 @@ const useStyles = makeStyles((theme) =>
       gap: theme.spacing(3),
       justifyContent: 'center',
       paddingTop: theme.spacing(4),
+      paddingBottom: theme.spacing(4),
       // backgroundColor: theme.palette.background.default,
       // backgroundColor: 'red',
     },

@@ -11,7 +11,7 @@ export default createMuiTheme({
     },
     background: {
       default: 'hsl(246, 0%, 20%)',
-      paper: 'hsl(246, 0%, 20%)',
+      paper: 'hsl(246, 0%, 25%)',
     },
     text: {
       // disabled: 'rgba(0, 0, 0, 0.38)',
