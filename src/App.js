@@ -4,6 +4,7 @@ import {ThemeProvider} from '@material-ui/core/styles';
 import {useSelector} from 'react-redux';
 import themes from './themes/themes';
 import useToggleTheme from './hooks/useToggleTheme';
+import CssBaseline from '@material-ui/core/CssBaseline';
 
 
 const App = (props) => {
@@ -12,11 +13,13 @@ const App = (props) => {
 
   return (
     <ThemeProvider theme={{...themes[theme]}}>
-      <Button
-        color='primary'
-        onClick={() => toggleTheme()}>
-          Button
-      </Button>
+      <CssBaseline>
+        <Button
+          color='primary'
+          onClick={() => toggleTheme()}>
+            Button
+        </Button>
+      </CssBaseline>
     </ThemeProvider>
   );
 };
