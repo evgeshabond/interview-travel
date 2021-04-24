@@ -10,13 +10,12 @@ const useStyles = makeStyles((theme) =>
   createStyles({
     root: {
       margin: 1,
-      paddingLeft: 5,
-      paddingRight: 5,
       height: '100%',
       display: 'flex',
       flexWrap: 'wrap',
       gap: theme.spacing(3),
       justifyContent: 'center',
+      padding: theme.spacing(2),
       paddingTop: theme.spacing(4),
       paddingBottom: theme.spacing(4),
       // backgroundColor: theme.palette.background.default,
@@ -34,24 +33,25 @@ const CountryList = () => {
   const classes = useStyles();
   const language = useSelector((state) => state.settings.language);
   const dispatch = useDispatch();
-  const countries = useSelector((state) => state.countries);
+  const countries = useSelector((state) => state.countries.countries);
   console.log(countries);
 
   useEffect(() => {
     dispatch(fetchCountries(language));
   }, [language, dispatch]);
 
-
   if (countries.status === 'loading') {
     return (<p>Loading</p>);
   }
+
   if (countries.status === 'failed') {
     return (<p>Something went wrong</p>);
   }
+
   return (
     <>
       <div className={classes.root}>
-        {countries.countries.map((item) => (
+        {countries.map((item) => (
           <CountryItem
             imageimageUrl={item.imageUrl}
             capital={item.capital}
