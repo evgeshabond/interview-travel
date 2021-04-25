@@ -8,7 +8,7 @@ const getCurrency = async (currencyFrom, currencyTo) => {
     const response = await axios.get(url);
     return response;
   } catch (e) {
-    throw e;
+    return null;
   }
 };
 

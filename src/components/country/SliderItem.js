@@ -8,6 +8,7 @@ const useStyles = makeStyles((theme) =>
     card: {
       backgroundColor: 'white',
       color: 'black',
+      // height: '35rem',
     },
     card__cardHeading: {
       height: '4rem',
@@ -21,7 +22,8 @@ const useStyles = makeStyles((theme) =>
       'zIndex': 99,
       'overflow': 'hidden',
       'objectFit': 'fill',
-      'aspectRatio': '4.5/3',
+      // 'aspectRatio': '4.5/3',
+      // 'paddingTop': '56.6%',
       '&:hover': {
         transform: 'scale(1.1)',
         transition: 'all .5s',
@@ -51,6 +53,7 @@ const SliderItem = ({name, description, photoUrl}) => {
         alt={name}
         title={name}
         image={photoUrl}
+        height='200px'
       />
       <CardContent className={classes.card__cardContent}>
         <Typography

@@ -28,7 +28,7 @@ const useStyles = makeStyles((theme) =>
 const CurrencyWidget = () => {
   const classes = useStyles();
   const currencyFrom = useSelector((state) => state.country.country.currency);
-  const [error, setError] = React.useState(null);
+  const [error, setError] = React.useState('Error occured');
   const [rates, setRates] = React.useState(null);
   convert(currencyFrom);
 
@@ -36,6 +36,8 @@ const CurrencyWidget = () => {
     if (!currencyFrom) return;
     const promise = convert(currencyFrom);
     promise.then((data) => {
+      if (!data) return;
+      setError(null);
       console.log(data);
       setRates(data);
     });
