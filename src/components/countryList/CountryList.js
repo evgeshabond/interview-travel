@@ -31,9 +31,27 @@ const useStyles = makeStyles((theme) =>
 
 const CountryList = () => {
   const classes = useStyles();
-  const language = useSelector((state) => state.settings.language);
   const dispatch = useDispatch();
-  const countries = useSelector((state) => state.countries.countries);
+  const language = useSelector((state) => state.settings.language);
+  const filterText = useSelector((state) => state.input.inputText);
+  const countries = useSelector((state) => {
+    return state.countries.countries;
+  });
+  const [countriesToRender, setCountriesToRender] = React.useState([]);
+
+  useEffect(() => {
+    console.log(countries);
+    if (countries.length < 1) return;
+    const filteredCountries = countries.filter((item) => {
+      return item.name.toLowerCase().includes(filterText.toLowerCase());
+    });
+    setCountriesToRender(filteredCountries);
+  }, [countries, filterText]);
+
+  // if (!state) return;
+  // state.countries.countries.filter((x) => {
+  //   return x.toLowerCase.includes(state.input.inputText.toLowerCase());
+  // }));
 
   useEffect(() => {
     dispatch(fetchCountries(language));
@@ -50,7 +68,7 @@ const CountryList = () => {
   return (
     <>
       <div className={classes.root}>
-        {countries.map((item) => (
+        {countriesToRender.map((item) => (
           <CountryItem
             imageimageUrl={item.imageUrl}
             capital={item.capital}

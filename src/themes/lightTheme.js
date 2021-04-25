@@ -19,5 +19,14 @@ export default createMuiTheme({
       primary: 'rgba(0, 0, 0, 0.87)',
       secondary: 'rgba(0, 0, 0, 0.87)',
     },
+    overrides: {
+      MuiCssBaseline: {
+        '@global': {
+          html: {
+            minHeight: '100vh',
+          },
+        },
+      },
+    },
   },
 });

@@ -16,7 +16,10 @@ const useStyles = makeStyles((theme) =>
       paddingTop: '1rem',
       backgroundColor: theme.palette.primary.dark,
       fontSize: '1rem',
-      marginTop: '1rem',
+      marginTop: 'auto',
+      position: 'absolute',
+      bottom: 0,
+      width: '100%',
     },
     logo: {
       filter: 'invert(1)',

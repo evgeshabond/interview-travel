@@ -19,5 +19,14 @@ export default createMuiTheme({
       primary: 'hsl(240, 100%, 100%)',
       secondary: 'hsl(240, 0%, 0%)',
     },
+    overrides: {
+      MuiCssBaseline: {
+        '@global': {
+          html: {
+            minHeight: '100vh',
+          },
+        },
+      },
+    },
   },
 });

@@ -19,6 +19,7 @@ const useStyles = makeStyles((theme) =>
     root: {
       marginTop: '2rem',
       padding: '1rem',
+      // marginBottom: '5rem',
       // paddingLeft: '0.5rem',
       // paddingRight: '0.5rem',
     },
