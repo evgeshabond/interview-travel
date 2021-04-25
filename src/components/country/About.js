@@ -5,6 +5,7 @@ import Typography from '@material-ui/core/Typography';
 import {useSelector} from 'react-redux';
 import Widgets from './Widgets';
 import {makeStyles, createStyles} from '@material-ui/core/styles';
+import Video from './Video';
 
 const useStyles = makeStyles((theme) =>
   createStyles({
@@ -35,6 +36,7 @@ const About = () => {
           <Widgets />
         </Grid>
       </Grid>
+      <Video />
     </Paper>
   );
 };
