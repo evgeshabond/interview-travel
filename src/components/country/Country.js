@@ -7,6 +7,7 @@ import {makeStyles, createStyles} from '@material-ui/core/styles';
 // import Grid from '@material-ui/core/Grid';
 import About from './About';
 import {useSelector} from 'react-redux';
+import Slider from './Slider';
 
 const useStyles = makeStyles((theme) =>
   createStyles({
@@ -32,7 +33,7 @@ const CountryData = () => {
         className={classes.countryImage}
       />
       <About countryData={countryData} />
-
+      <Slider />
     </Container>
   );
 };
