@@ -3,7 +3,7 @@ import Header from '../components/header/Header';
 import {useSelector, useDispatch} from 'react-redux';
 // import {getCountryDataByLang} from '../service/countries';
 import {fetchCountry} from '../redux/countrySlice';
-// import Footer from '../components/footer/Footer';
+import Footer from '../components/footer/Footer';
 import Country from '../components/countryData/Country';
 
 
@@ -11,7 +11,6 @@ const CountryPage = () => {
   const dispatch = useDispatch();
   const countryId = document.location.pathname.substr(1);
   const language = useSelector((state) => state.settings.language);
-
 
   useEffect(() => {
     dispatch(fetchCountry({countryId, language}));
@@ -21,7 +20,7 @@ const CountryPage = () => {
     <>
       <Header />
       <Country />
-      {/* <Footer /> */}
+      <Footer />
     </>
   );
 };

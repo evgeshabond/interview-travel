@@ -17,7 +17,7 @@ export default createMuiTheme({
       // disabled: 'rgba(0, 0, 0, 0.38)',
       // hint: 'rgba(0, 0, 0, 0.38)',
       primary: 'hsl(240, 100%, 100%)',
-      secondary: 'hsl(240, 100%, 100%)',
+      secondary: 'hsl(240, 0%, 0%)',
     },
   },
 });
