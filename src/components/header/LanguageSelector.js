@@ -17,7 +17,6 @@ const LanguageSelector = () => {
   const classes = useStyles();
 
   const handleChange = (e) => {
-    console.log(e.target.value);
     dispatch(setLanguage({language: e.target.value}));
   };
 

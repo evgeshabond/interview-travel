@@ -6,6 +6,4 @@ const themes = {
   'light': lightTheme,
 };
 
-console.log(themes);
-
 export default themes;

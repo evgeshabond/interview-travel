@@ -34,7 +34,6 @@ const CountryList = () => {
   const language = useSelector((state) => state.settings.language);
   const dispatch = useDispatch();
   const countries = useSelector((state) => state.countries.countries);
-  console.log(countries);
 
   useEffect(() => {
     dispatch(fetchCountries(language));

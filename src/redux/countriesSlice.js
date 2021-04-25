@@ -1,6 +1,7 @@
 import {createSlice, createAsyncThunk} from '@reduxjs/toolkit';
 import {getCountriesByLang} from '../service/countries';
 
+
 const initialState = {
   countries: [],
   status: 'idle',

@@ -11,4 +11,15 @@ const getCountriesByLang = async (language) => {
   }
 };
 
-export {getCountriesByLang};
+const getCountryDataByLang = async (id, language = 'en') => {
+  console.log('inside service lang is ', language);
+  const url = `${baseUrl}/${id}?lang=${language}`;
+  try {
+    const response = await axios.get(url);
+    return response.data;
+  } catch (e) {
+    throw new Error(e.message);
+  }
+};
+
+export {getCountriesByLang, getCountryDataByLang};
