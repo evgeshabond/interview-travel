@@ -17,7 +17,6 @@ const useStyles = makeStyles((theme) =>
 
 const Widgets = () => {
   const classes = useStyles();
-  console.log(classes);
 
   return (
     <Grid
@@ -30,8 +29,8 @@ const Widgets = () => {
       <Grid item lg={12} md={12} sm={5} xs={12}>
         <WeatherWidget />
       </Grid>
-      <Grid item sm={1} xs={0} />
-      <Grid item lg={12} md={12} sm={5} xs={12} alignItems='center'>
+      <Grid item sm={1} />
+      <Grid item lg={12} md={12} sm={5} xs={12} >
         <p>Widget2</p>
       </Grid>
       {/* <Currencies currency={countryData.currency}/> */}

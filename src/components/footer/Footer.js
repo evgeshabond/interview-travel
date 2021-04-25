@@ -16,6 +16,7 @@ const useStyles = makeStyles((theme) =>
       paddingTop: '1rem',
       backgroundColor: theme.palette.primary.dark,
       fontSize: '1rem',
+      marginTop: '1rem',
     },
     logo: {
       filter: 'invert(1)',
@@ -26,7 +27,12 @@ const useStyles = makeStyles((theme) =>
 const Footer = () => {
   const classes = useStyles();
   const isHidden = useSelector((state) => {
-    return state.countries.status !== 'succeeded';
+    const isCountriesLoaded = state.countries.status === 'succeeded';
+    const isCountryLoaded = state.country.status === 'succeeded';
+    // console.log(state.country.status);
+    console.log(isCountriesLoaded, isCountryLoaded);
+    console.log(!(isCountriesLoaded || isCountryLoaded));
+    return (!(isCountriesLoaded || isCountryLoaded));
   });
 
   if (isHidden) {

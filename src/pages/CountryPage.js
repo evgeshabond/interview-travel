@@ -4,7 +4,7 @@ import {useSelector, useDispatch} from 'react-redux';
 // import {getCountryDataByLang} from '../service/countries';
 import {fetchCountry} from '../redux/countrySlice';
 import Footer from '../components/footer/Footer';
-import Country from '../components/countryData/Country';
+import Country from '../components/country/Country';
 
 
 const CountryPage = () => {
