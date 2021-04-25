@@ -20,7 +20,7 @@ const useStyles = makeStyles((theme) =>
       'maxHeight': 600,
       'height': '100%',
       'color': theme.palette.text.main,
-      'background': theme.palette.primary.light,
+      // 'background': theme.palette.primary.light,
       'transition': 'all .5s',
       '& .MuiCard-root': {
         paddingBottom: 5,
@@ -28,7 +28,7 @@ const useStyles = makeStyles((theme) =>
       '&:hover': {
         'boxShadow': '0px 5px 10px 2px rgba(71, 73, 75, 0.2)',
         'color': theme.palette.text.main,
-        'background': theme.palette.background.paper,
+        'background': theme.palette.primary.light,
         '& .MuiCardMedia-root': {
           transform: 'scale(1.1)',
         },
