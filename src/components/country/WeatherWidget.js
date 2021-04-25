@@ -22,11 +22,14 @@ const images = {clouds, clear, drizzle, mist, rain, snow, thunderstorm};
 const useStyles = makeStyles((theme) =>
   createStyles({
     weather: {
+      minHeight: '9rem',
       minWidth: '12rem',
       display: 'flex',
       flexDirection: 'column',
       alignItems: 'center',
+      justifyContent: 'center',
       backgroundColor: 'white',
+      marginBottom: '1rem',
     },
     weather__icon: {
       width: '3rem',

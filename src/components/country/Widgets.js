@@ -1,6 +1,7 @@
 import React from 'react';
 import Grid from '@material-ui/core/Grid';
 import WeatherWidget from './WeatherWidget';
+import CurrencyWidget from './CurrencyWidget';
 import {makeStyles, createStyles} from '@material-ui/core/styles';
 
 const useStyles = makeStyles((theme) =>
@@ -31,7 +32,7 @@ const Widgets = () => {
       </Grid>
       <Grid item sm={1} />
       <Grid item lg={12} md={12} sm={5} xs={12} >
-        <p>Widget2</p>
+        <CurrencyWidget />
       </Grid>
       {/* <Currencies currency={countryData.currency}/> */}
     </Grid>
