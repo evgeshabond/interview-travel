@@ -1,12 +1,11 @@
-/* eslint-disable */
 import React from 'react';
 import {useEffect} from 'react';
 import {useSelector} from 'react-redux';
 import {weatherUrl} from '../utils/constants';
 import axios from 'axios';
 
-const atmosphereList = ['mist', 'smoke', 'haze', 'dust', 'fog', 'sand', 'dust', 'ash',
-  'squall', 'tornado'];
+const atmosphereList = ['mist', 'smoke', 'haze', 'dust',
+  'fog', 'sand', 'dust', 'ash', 'squall', 'tornado'];
 
 const useWeather = () => {
   const [data, setData] = React.useState(null);
@@ -17,6 +16,7 @@ const useWeather = () => {
   useEffect(() => {
     if (!coordinates) return null;
 
+    // eslint-disable-next-line max-len
     const url = `${weatherUrl}?lat=${coordinates[0]}&lon=${coordinates[1]}&lang=${language}&appid=57781f6b98433e378452bea1ff327bd2&units=metric`;
     const newData = {temp: '', imageName: '', description: ''};
     const dataPromise = axios.get(url);

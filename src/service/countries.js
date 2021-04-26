@@ -12,7 +12,6 @@ const getCountriesByLang = async (language) => {
 };
 
 const getCountryDataByLang = async (id, language = 'en') => {
-  console.log('inside service lang is ', language);
   const url = `${baseUrl}/${id}?lang=${language}`;
   try {
     const response = await axios.get(url);

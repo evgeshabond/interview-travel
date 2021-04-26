@@ -1,8 +1,4 @@
-/* eslint-disable max-len */
 import React from 'react';
-// import {useSelector} from 'react-redux';
-// import {weatherUrl} from '../../utils/constants';
-// import axios from 'axios';
 import Card from '@material-ui/core/Card';
 import Typography from '@material-ui/core/Typography';
 import CardMedia from '@material-ui/core/CardMedia';
@@ -43,8 +39,6 @@ const useStyles = makeStyles((theme) =>
 const WeatherWidget = () => {
   const classes = useStyles();
   const weatherData = useWeather();
-
-  console.log(weatherData);
 
   return (weatherData &&
     <Card elevation={3} className={classes.weather}>

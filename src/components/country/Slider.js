@@ -55,7 +55,6 @@ const Slider = () => {
   const classes = useStyles();
   const params = useSliderParams();
   const places = useSelector((state) => state.country.country.places);
-  console.log(places);
 
   const renderSlides = () => {
     return places.map(({description, name, photoUrl}) => (

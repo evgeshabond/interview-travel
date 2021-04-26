@@ -40,7 +40,6 @@ const CountryList = () => {
   const [countriesToRender, setCountriesToRender] = React.useState([]);
 
   useEffect(() => {
-    console.log(countries);
     if (countries.length < 1) return;
     const filteredCountries = countries.filter((item) => {
       return item.name.toLowerCase().includes(filterText.toLowerCase());

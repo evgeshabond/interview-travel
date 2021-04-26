@@ -44,7 +44,6 @@ const useStyles = makeStyles((theme) =>
 
 const SliderItem = ({name, description, photoUrl}) => {
   const classes = useStyles();
-  console.log(name, description, photoUrl);
   return (
     <Card className={classes.card}>
       <CardMedia

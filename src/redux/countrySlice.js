@@ -11,9 +11,7 @@ const initialState = {
 
 export const fetchCountry = createAsyncThunk('country/fetchCountry',
     async ({countryId, language}) => {
-      console.log('inside middleware lang is ', language);
       const response = await getCountryDataByLang(countryId, language);
-      console.log(response);
       return response;
     });
 

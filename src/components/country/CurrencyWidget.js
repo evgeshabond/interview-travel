@@ -38,13 +38,11 @@ const CurrencyWidget = () => {
     promise.then((data) => {
       if (!data) return;
       setError(null);
-      console.log(data);
       setRates(data);
     });
     promise.catch((e) => setError(e.message));
   }, [currencyFrom]);
 
-  // useEffect(() => console.log(rates), [rates]);
 
   const renderCurrenciesList = () => {
     // if (!currencyFrom) return null;

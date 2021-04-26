@@ -32,9 +32,6 @@ const Footer = () => {
   const isHidden = useSelector((state) => {
     const isCountriesLoaded = state.countries.status === 'succeeded';
     const isCountryLoaded = state.country.status === 'succeeded';
-    // console.log(state.country.status);
-    console.log(isCountriesLoaded, isCountryLoaded);
-    console.log(!(isCountriesLoaded || isCountryLoaded));
     return (!(isCountriesLoaded || isCountryLoaded));
   });
 

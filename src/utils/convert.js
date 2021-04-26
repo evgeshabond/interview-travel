@@ -11,7 +11,7 @@ const convert = async (currencyFrom) => {
       await getCurrency(currencyFrom, currencyTo)
           .then((data) => rates[currencyTo] = data.data[exchangeCode]);
     } catch (e) {
-      return null;
+      return e;
     }
   }
   return rates;
